@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - CargaTech</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="container-fluid bg-dark text-white">
+
+  <!-- Menu superior -->
+  <nav class="top-menu d-flex justify-content-between align-items-center mb-4">
+    <div><strong class="fs-5">CargaTech</strong></div>
+    <div>
+      <a href="dashboard.html" class="text-white">Dashboard</a>
+      <a href="clientes.html" class="text-white">Clientes</a>
+      <a href="veiculos.html" class="text-white">Veículos</a>
+      <a href="vendas.html" class="text-white">Vendas</a>
+      <a href="index.html" class="text-danger">Sair</a>
+    </div>
+  </nav>
+
+  <section class="card card-body mb-4">
+    <h1 class="h4 mb-4">Bem-vindo ao Painel, Usuário!</h1>
+
+    <!-- CARDS DE RESUMO -->
+    <div class="row text-center mb-4">
+      <div class="col-md-3 mb-3">
+        <div class="card card-body bg-primary text-white shadow-sm">
+          <h5>Clientes</h5>
+          <p class="fs-3 fw-bold">128</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card card-body bg-success text-white shadow-sm">
+          <h5>Veículos</h5>
+          <p class="fs-3 fw-bold">52</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card card-body bg-warning text-dark shadow-sm">
+          <h5>Vendas</h5>
+          <p class="fs-3 fw-bold">73</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card card-body bg-danger text-white shadow-sm">
+          <h5>Lucro Mensal</h5>
+          <p class="fs-3 fw-bold">R$ 24.300</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARROSSEL -->
+    <div id="carouselDashboard" class="carousel slide shadow-sm rounded mb-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/1200/400?1" class="d-block w-100" alt="Banner 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/400?2" class="d-block w-100" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/400?3" class="d-block w-100" alt="Banner 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDashboard" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDashboard" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- GRÁFICOS -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body bg-secondary shadow-sm mb-3">
+          <canvas id="grafico1"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-body bg-secondary shadow-sm mb-3">
+          <canvas id="grafico2"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

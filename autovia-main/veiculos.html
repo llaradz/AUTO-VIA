@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Veículos - CargaTech</title>
+
+    <!-- Bootstrap e CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+
+  <body class="p-3">
+    <!-- Menu Superior -->
+    <nav class="top-menu d-flex justify-content-between align-items-center mb-4">
+      <div><strong class="brand-name">CargaTech</strong></div>
+      <div class="menu-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="veiculos.html" class="active">Veículos</a>
+        <a href="vendas.html">Vendas</a>
+        <a href="index.html" class="text-danger">Sair</a>
+      </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <section class="card p-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h4 mb-0">Veículos</h1>
+        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#novoVeiculoForm">
+          Novo Veículo
+        </button>
+      </div>
+
+      <!-- Tabela -->
+      <table class="table table-striped table-hover text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Placa</th>
+            <th>Foto</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CAM-1010</td>
+            <td><img src="https://cdn.motor1.com/images/mgl/0x8X0/s1/volvo-fh16.jpg" alt="Volvo FH16" class="img-thumb"></td>
+            <td>Volvo</td>
+            <td>FH16</td>
+            <td>2018</td>
+            <td>
+              <a href="#" class="btn btn-sm btn-outline-info"><i class="bi bi-pencil-fill"></i>Editar</a>
+              <a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash-fill"></i>Excluir</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>CAM-2020</td>
+            <td><img src="https://cdn.motor1.com/images/mgl/2xP0l/s1/scania-r500.jpg" alt="Scania R500" class="img-thumb"></td>
+            <td>Scania</td>
+            <td>R500</td>
+            <td>2019</td>
+            <td>
+              <a href="#" class="btn btn-sm btn-outline-info"><i class="bi bi-pencil-fill"></i>Editar</a>
+              <a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash-fill"></i>Excluir</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>CAM-3030</td>
+            <td><img src="https://cdn.motor1.com/images/mgl/pQ1lX/s1/mercedes-benz-actros.jpg" alt="Mercedes Actros" class="img-thumb"></td>
+            <td>Mercedes</td>
+            <td>Actros</td>
+            <td>2020</td>
+            <td>
+              <a href="#" class="btn btn-sm btn-outline-info"><i class="bi bi-pencil-fill"></i>Editar</a>
+              <a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash-fill"></i>Excluir</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Novo Veículo -->
+    <div class="offcanvas offcanvas-end" id="novoVeiculoForm">
+      <div class="offcanvas-header">
+        <h5>Novo Veículo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+          <input type="text" class="form-control mb-2" placeholder="Placa">
+          <input type="text" class="form-control mb-2" placeholder="Marca">
+          <input type="text" class="form-control mb-2" placeholder="Modelo">
+          <input type="number" class="form-control mb-2" placeholder="Ano" min="1950" max="2026">
+          <input type="file" class="form-control mb-2">
+          <button class="btn btn-success w-100">Adicionar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+/* Fonte e fundo */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Imagem de fundo */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6); /* escurece levemente a imagem */
+  z-index: 0;
+}
+
+/* Card do login */
+.login-card {
+  background-color: #0d1b2a; /* transparente */
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  z-index: 1; /* acima da imagem */
+  position: relative;
+  color: #fff; /* texto branco */
+  text-align: center;
+}
+
+/* Título */
+.login-card h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão */
+.btn-primary {
+  background-color: #007BFF; /* azul da empresa */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
