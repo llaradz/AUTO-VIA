@@ -1,0 +1,12 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card h5 {
+  margin-bottom: 0.5rem;
+}
+
+.carousel img {
+  object-fit: cover;
+  height: 400px;
+}
